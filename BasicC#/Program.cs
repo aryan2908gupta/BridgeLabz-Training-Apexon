@@ -2,6 +2,7 @@
 using BasicC_.Arrays;
 using BasicC_.DataTypes;
 using BasicC_.Loops;
+using BasicC_.Strings;
 using BasicC_.Statements;
 using System.Collections.Concurrent;
 using System.Runtime.Intrinsics.X86;
@@ -104,10 +105,17 @@ namespace BasicC_
             Transposeofmatrix t = new Transposeofmatrix();
             t.transpose();
 
-            */
+
             
             RotateBy90 r = new RotateBy90();
             r.rotate();
+            
+
+            Reversee r = new Reversee();
+            r.rev();
+            */
+            Nonrepeating rs = new Nonrepeating();
+            rs.nonrepeat();
             
         }
     }
