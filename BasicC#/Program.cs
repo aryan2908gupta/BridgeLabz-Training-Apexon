@@ -113,10 +113,15 @@ namespace BasicC_
 
             Reversee r = new Reversee();
             r.rev();
-            */
+            
             Nonrepeating rs = new Nonrepeating();
             rs.nonrepeat();
-            
+          
+           LongestNonRepeatingSubstring st = new LongestNonRepeatingSubstring();
+            st.nonrepeating();
+              */
+            StringCompression cs = new StringCompression();
+            cs.stringcomp();
         }
     }
 }
