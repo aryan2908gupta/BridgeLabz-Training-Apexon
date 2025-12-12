@@ -1,6 +1,8 @@
-﻿using OOPS.Constructor;
+﻿using OOPS.Abstraction;
+using OOPS.Constructor;
 using OOPS.Heriachaial_Inheritance;
 using OOPS.Inheritance;
+using OOPS.Interface;
 using OOPS.Multiple_Inheritance;
 using System.Security.Cryptography.X509Certificates;
 
@@ -101,12 +103,33 @@ namespace OOPS
               
             Dog d = new Dog();
             d.breathe();
-            */
+            
 
             Cat c1 = new Cat();
             c1.breathe();
             c1.CatBreathe();
 
+          
+            
+            Call c1 = new Call();
+            c1.Add(10, 20);
+            c1.Sub(30, 34);
+            c1.Mod(10, 5);
+            c1.Mul(4, 5);
+            c1.Div(4, 5);
+
+            
+
+            ClassImplementation1 c =new ClassImplementation1();
+            c.add(10, 20);
+
+            ClassImplementation2 b = new ClassImplementation2();
+            b.add(10, 40);
+            b.sub(23, 12);
+              */
+
+            ClassImplementation impl = new ClassImplementation();
+            impl.Test();
 
         }
     }
