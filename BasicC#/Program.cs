@@ -6,6 +6,7 @@ using BasicC_.Strings;
 using BasicC_.Statements;
 using System.Collections.Concurrent;
 using System.Runtime.Intrinsics.X86;
+using BasicC_.ExceptionHandling;
 
 namespace BasicC_
 {
@@ -119,9 +120,20 @@ namespace BasicC_
           
            LongestNonRepeatingSubstring st = new LongestNonRepeatingSubstring();
             st.nonrepeating();
-              */
+              
             StringCompression cs = new StringCompression();
             cs.stringcomp();
+           
+
+            Conditionalexception ex = new Conditionalexception();
+            ex.error();
+           
+
+            trycatch cs = new trycatch();
+            cs.error();
+              */
+            CustomException cs  = new CustomException();
+            cs.error();
         }
     }
 }
