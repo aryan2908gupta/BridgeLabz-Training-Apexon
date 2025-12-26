@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../CalculatorTesting/CalculatorTesting.csproj" />
+  <Project Path="NunitCal.csproj" />
+</Solution>
