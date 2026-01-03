@@ -1,7 +1,12 @@
 ﻿namespace Abstract.NetOptimized;
 
+using DesignPattern.Adapter;
 using DesignPattern.BuilderDesign;
 using DesignPattern.Factory_Pattern;
+using DesignPattern.Prototype;
+using DesignPattern.Proxy;
+using DesignPattern.Singleton;
+using System.Net;
 using static System.Console;
 
 /// <summary>
@@ -146,10 +151,60 @@ public class Program
         House house = builder.Build();
         */
 
+        /*
         IVechiles vehicle = VechileFactory.GetVehicle("Bike");
         vehicle.Drive(); // Calls Bike's Drive()
+        */
 
+        /*
+         Employee emp1 = new Employee
+        {
+            Name = "Aryan",
+            Address = new Address { City = "Delhi" }
+        };
 
+        Employee emp2 = (Employee)emp1.Clone();
+
+        emp2.Name = "Rahul";
+        emp2.Address.City = "Mumbai";
+        */
+        /*
+        Singleton obj1 = Singleton.GetInstance();
+        Singleton obj2 = Singleton.GetInstance();
+
+        obj1.ShowMessage();
+
+        Console.WriteLine(obj1 == obj2); // True
+        */
+
+        /*
+        IDevice tv = new TV();
+        RemoteControl remote = new BasicRemote(tv);
+
+        remote.On();
+        remote.Off();
+
+        IDevice radio = new Radio();
+        remote = new BasicRemote(radio);
+
+        remote.On();
+        remote.Off();
+        */
+
+        /*
+        Adaptee adaptee = new Adaptee();
+        ITarget target = new Adapter(adaptee);
+
+        target.Request();
+        */
+
+        IImage image = new ProxyImage("photo.jpg");
+
+        Console.WriteLine("Image will load now:");
+        image.Display();
+
+        Console.WriteLine("\nImage already loaded:");
+        image.Display();
     }
 }
 

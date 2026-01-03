@@ -6,5 +6,8 @@ namespace DesignPattern.Prototype
 {
     internal interface IEmployeePrototype
     {
+        IEmployeePrototype Clone();
     }
 }
+
+// Prototype Interface
