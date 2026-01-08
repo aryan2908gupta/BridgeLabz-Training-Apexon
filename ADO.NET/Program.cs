@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using System.Data;
 
 class Program
 {
@@ -42,7 +43,9 @@ class Program
 
         using (SqlConnection con = new SqlConnection(constr))
         {
-            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlCommand cmd = new SqlCommand("sp_InsertStudent", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+          
             cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@name", name);
 
@@ -58,7 +61,9 @@ class Program
         string sql = "select * from studentInfo";
         using (SqlConnection con = new SqlConnection(constr))
         {
-            SqlCommand cmd = new SqlCommand(sql, con);
+            //   SqlCommand cmd = new SqlCommand(sql, con);
+            SqlCommand cmd = new SqlCommand("sp_getAllStudent", con);
+            cmd.CommandType = CommandType.StoredProcedure;
             con.Open();
 
             SqlDataReader reader = cmd.ExecuteReader();
@@ -82,7 +87,8 @@ class Program
 
         using (SqlConnection con = new SqlConnection(constr))
         {
-            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlCommand cmd = new SqlCommand("sp_updateStudent", con);
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@id", id);
             cmd.Parameters.AddWithValue("@name", name);
 
@@ -109,8 +115,9 @@ class Program
 
         using (SqlConnection con = new SqlConnection(constr))
         {
-            SqlCommand cmd = new SqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@id", id);
+            SqlCommand cmd = new SqlCommand("sp_deleteAllStudent", con);
+                cmd.CommandType= CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id", id);
 
             con.Open();
             int rows = cmd.ExecuteNonQuery();
@@ -124,3 +131,13 @@ class Program
         }
     }
 }
+
+/*
+ NOTES
+C# CONSOLE APP USING STORED PROCEDURES
+🔹 Common Rule
+
+Always set:
+
+cmd.CommandType = CommandType.StoredProcedure;
+ */
