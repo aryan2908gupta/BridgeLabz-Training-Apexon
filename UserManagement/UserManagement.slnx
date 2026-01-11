@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../UserManagement.BLL/UserManagement.BLL.csproj" />
+  <Project Path="../UserManagement.DAL/UserManagement.DAL.csproj" />
+  <Project Path="../UserManagement.Model/UserManagement.Model.csproj" />
+  <Project Path="UserManagement.Api.csproj" />
+</Solution>
